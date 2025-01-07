@@ -52,16 +52,10 @@ public class Extension extends ExtensionBase {
      */
     public int calculateGramsOfSugar(String[] ingredients, int layers) {
         int sugar = 0;
-        boolean containSugar = false;
         for (int i = 0; i < ingredients.length; i++) {
             if (ingredients[i].contains("sugar")) {
-                containSugar = true;
-            }
-        }
-        if (containSugar == true) {
-            sugar = 100 * layers;
-        } else {
-            sugar = 0;
+                sugar = 100 * layers;
+            } 
         }
         return sugar;
     }
